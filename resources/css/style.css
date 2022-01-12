@@ -155,11 +155,19 @@ header {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-/*-------------------Header Nav----------------------*/
+/*-------------------Main Nav----------------------*/
 .logo {
   height: 100px;
   width: auto;
   margin-top: 20px;
+  position: absolute;
+}
+.logo-black {
+  display: none;
+  height: 50px;
+  width: auto;
+  float: left;
+  margin: 5px 0px;
 }
 .main-nav {
   float: right;
@@ -181,6 +189,45 @@ header {
 .main-nav li a:active,
 .main-nav li a:hover {
   border-bottom: 2px solid #e67e22;
+}
+/*------------------Moblile Nav---------------*/
+.mobile-nav-icon {
+  float: right;
+  cursor: pointer;
+  margin-top: 30px;
+  display: none;
+}
+.mobile-nav-icon i {
+  color: #fff;
+  font-size: 200%;
+}
+/*-------------------Sticky Nav----------------------*/
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 2px 2px #555;
+  z-index: 9999;
+}
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+  color: #555;
+  padding: 5px 0;
+}
+.sticky .logo {
+  display: none;
+}
+.sticky .logo-black {
+  display: block;
+}
+.sticky .main-nav {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.sticky .mobile-nav-icon i {
+  color: #555;
 }
 /*-------------------Feature Session----------------------*/
 .section-feature .long-para {
@@ -477,7 +524,7 @@ footer {
   margin-right: 0;
 }
 .footer-nav li a:link,
-.footer-nac li a:visited,
+.footer-nav li a:visited,
 .social-links li a:link,
 .social-links li a:visited {
   text-decoration: none;
@@ -503,4 +550,16 @@ footer {
   padding-top: 90px;
   padding-bottom: 50px;
   margin-top: 30px;
+}
+/*---------------------Animation Section---------------------------*/
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+  opacity: 0;
+  animation-duration: 1.5s;
+}
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+  opacity: 1;
 }
